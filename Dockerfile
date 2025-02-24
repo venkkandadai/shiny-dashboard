@@ -2,7 +2,7 @@
 FROM rocker/shiny:latest
 
 # Install required R packages
-RUN R -e "install.packages(c('shiny', 'DT', 'readxl'))"
+RUN R -e "install.packages(c('shiny', 'DT', 'readxl', 'ggplot2', 'dplyr'))"
 
 # Copy app files into the container
 COPY . /srv/shiny-server/
